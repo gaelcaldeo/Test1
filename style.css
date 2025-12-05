@@ -1,11 +1,15 @@
+/* Body and general layout */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
-    background: #f8f8f8;
+    padding: 0;
+    background: #f4f7f9;
+    color: #333;
 }
 
+/* Header / Navbar */
 header {
-    background: #222;
+    background: #2c3e50; /* Dark blue-gray */
     color: white;
     padding: 20px;
     text-align: center;
@@ -19,34 +23,84 @@ nav a {
 }
 
 nav a.active {
-    text-decoration: underline;
+    border-bottom: 2px solid #e74c3c; /* Red accent */
 }
 
+/* Hero Section (Home page) */
 .hero {
-    padding: 50px;
     text-align: center;
+    padding: 80px 20px;
+    background: #ecf0f1; /* Light gray background */
 }
 
+.hero h2 span {
+    color: #e74c3c; /* Highlight your name in red */
+}
+
+/* Buttons */
 button {
-    padding: 10px 20px;
-    background: royalblue;
+    padding: 12px 25px;
+    background: #e74c3c;
     color: white;
     border: none;
+    border-radius: 5px;
     cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease; /* smooth animation */
 }
 
 button:hover {
-    background: dodgerblue;
+    background: #c0392b;
+    transform: scale(1.1); /* grows slightly */
 }
 
+
+/* Sections */
+section {
+    padding: 50px 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+/* Forms */
 form {
-    width: 300px;
-    margin: 20px auto;
     display: flex;
     flex-direction: column;
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
 }
 
 input, textarea {
-    margin: 8px 0;
-    padding: 10px;
+    margin: 10px 0;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
+
+input:focus, textarea:focus {
+    border-color: #e74c3c;
+    outline: none;
+}
+.project-card {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px); /* lift up */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2); /* stronger shadow */
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.hero h2 {
+    animation: fadeIn 1s ease-out forwards;
+}
+

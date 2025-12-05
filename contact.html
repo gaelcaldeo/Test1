@@ -8,7 +8,8 @@
 </head>
 <body>
 
-<header>
+<header> <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
     <h1>My Portfolio</h1>
     <nav>
         <a href="index.html">Home</a>
@@ -20,18 +21,19 @@
 
 <section>
     <h2>Contact Me</h2>
-    <form>
-        <label>Name:</label>
-        <input type="text" placeholder="Your Name">
+    <form action="https://formspree.io/f/xeoyzlzl" method="POST">
+    <label>Name:</label>
+    <input type="text" name="name" placeholder="Your Name" required>
 
-        <label>Email:</label>
-        <input type="email" placeholder="Your Email">
+    <label>Email:</label>
+    <input type="email" name="email" placeholder="Your Email" required>
 
-        <label>Message:</label>
-        <textarea placeholder="Your Message"></textarea>
+    <label>Message:</label>
+    <textarea name="message" placeholder="Your Message" required></textarea>
 
-        <button type="submit">Send</button>
-    </form>
+    <button type="submit">Send</button>
+</form>
+
 </section>
 
 </body>
